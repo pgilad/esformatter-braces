@@ -1,42 +1,42 @@
 {
-    "name": "esformatter-braces",
-    "version": "0.1.0",
-    "description": "esformatter plugin: enforces braces around statements",
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "main": "index.js",
-    "files": [
-        "index.js",
-        "license.md"
-    ],
-    "scripts": {
-        "test": "mocha -R spec test",
-        "watch": "mocha -R spec --watch test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pgilad/esformatter-braces.git"
-    },
-    "keywords": [
-        "esformatter",
-        "string",
-        "braces",
-        "AST",
-        "rocambole",
-        "esprima",
-        "codestyle"
-    ],
-    "author": {
-        "name": "Gilad Peleg",
-        "email": "giladp007@gmail.com"
-    },
-    "license": "MIT",
-    "bugs": "https://github.com/pgilad/esformatter-braces/issues",
-    "homepage": "https://github.com/pgilad/esformatter-braces",
-    "devDependencies": {
-        "chai": "^1.9.1",
-        "esformatter": "^0.3.2",
-        "mocha": "^1.20.1"
-    }
+  "name": "esformatter-braces",
+  "version": "0.1.1",
+  "description": "esformatter plugin: enforces braces around statements",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "license.md"
+  ],
+  "scripts": {
+    "test": "mocha -R spec test",
+    "watch": "mocha -R spec --watch test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pgilad/esformatter-braces.git"
+  },
+  "keywords": [
+    "esformatter",
+    "string",
+    "braces",
+    "AST",
+    "rocambole",
+    "esprima",
+    "codestyle"
+  ],
+  "author": {
+    "name": "Gilad Peleg",
+    "email": "giladp007@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": "https://github.com/pgilad/esformatter-braces/issues",
+  "homepage": "https://github.com/pgilad/esformatter-braces",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "esformatter": "^0.3.2",
+    "mocha": "^1.20.1"
+  }
 }
