@@ -3,13 +3,13 @@
 
 var tk = require('rocambole-token');
 
-var wrapWithBraces = function(node, prop) {
+var wrapWithBraces = function (node, prop) {
     var old = node[prop];
     var block = {
         type: 'BlockStatement',
         parent: old.parent,
         root: old.root,
-        body: [ old ],
+        body: [old],
         startToken: tk.before(old.startToken, {
             type: 'Punctuator',
             value: '{'
@@ -23,7 +23,7 @@ var wrapWithBraces = function(node, prop) {
     node[prop] = block;
 };
 
-var checkConditionals = function(node) {
+var checkConditionals = function (node) {
     //replace regular conditionals
     if (node.consequent.type === 'ExpressionStatement') {
         wrapWithBraces(node, 'consequent');
@@ -34,7 +34,7 @@ var checkConditionals = function(node) {
     }
 };
 
-exports.nodeBefore = function(node) {
+exports.nodeBefore = function (node) {
     //handle conditionals
     if (node.type === 'IfStatement') {
         checkConditionals(node);

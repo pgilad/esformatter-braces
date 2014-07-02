@@ -27,9 +27,7 @@ if (theSkyIsBlue) {
 }
 ```
 
-This plugin currently blindly wraps the needed statement with `{ %s }` formatting.
-
-For any formatting (such as braces placement, spacing and line wrapping) use esformatter or other plugins for that.
+*For any formatting (such as braces placement, spacing and line wrapping) use esformatter or other plugins for that.*
 
 ## Goals
 
