@@ -1,6 +1,6 @@
 {
   "name": "esformatter-braces",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "esformatter plugin: enforces braces around statements",
   "engines": {
     "node": ">=0.10.0"
