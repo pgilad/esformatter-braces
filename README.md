@@ -9,12 +9,8 @@
 **esformatter-braces** will enforce adding braces to your statements. Please see [Jetbrain's Idea](http://www.jetbrains.com/idea/webhelp10.5/wrapping-and-braces.html)
 and specifically the **Force braces - always** section for more information on behavior.
 
-Currently this plugin handles the following statements:
-
-1. If conditionals
-2. While
-3. Do While
-4. For loops
+Currently the following node types are handled:
+ **If conditionals**, **While**, **Do While**, **For loops**
 
 Turn this:
 ```js
@@ -31,7 +27,7 @@ if (theSkyIsBlue) {
 
 This plugin currently blindly wraps the needed statement with `{ %s }` formatting.
 
-For any additional formatting (such as braces placement and spacing) use esformatter or other plugins for that.
+For any formatting (such as braces placement, spacing and line wrapping) use esformatter or other plugins for that.
 
 ## Goals
 
