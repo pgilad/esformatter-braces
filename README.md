@@ -16,6 +16,19 @@ Currently this plugin handles the following statements:
 3. Do While
 4. For loops
 
+Turn this:
+```js
+if (theSkyIsBlue)
+    stareAtItForAWhile();
+```
+
+into:
+```js
+if (theSkyIsBlue) {
+    stareAtItForAWhile();
+}
+```
+
 This plugin currently blindly wraps the needed statement with `{ %s }` formatting.
 
 For any additional formatting (such as braces placement and spacing) use esformatter or other plugins for that.
