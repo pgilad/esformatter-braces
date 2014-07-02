@@ -11,8 +11,8 @@
         "license.md"
     ],
     "scripts": {
-        "test": "mocha --ui bdd --reporter spec test",
-        "watch": "mocha --ui bdd --reporter spec --watch test"
+        "test": "mocha -R spec test",
+        "watch": "mocha -R spec --watch test"
     },
     "repository": {
         "type": "git",

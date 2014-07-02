@@ -10,13 +10,15 @@
 and specifically the **Force braces - always** section for more information on behavior.
 
 Currently this plugin handles the following statements:
+
 1. If conditionals
 2. While
 3. Do While
 4. For loops
 
-This plugin currently blindly wraps the needed statement with `{ %s }` formatting. If you want additional formatting you should use
-esformatter or other plugins for that. This plugin won't deal with braces placement or styling.
+This plugin currently blindly wraps the needed statement with `{ %s }` formatting.
+
+For any additional formatting (such as braces placement and spacing) use esformatter or other plugins for that.
 
 ## Goals
 
