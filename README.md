@@ -6,13 +6,7 @@
 [![NPM Downloads](http://img.shields.io/npm/dm/esformatter-braces.svg?style=flat)](https://npmjs.org/package/esformatter-braces)
 [![Build Status](http://img.shields.io/travis/pgilad/esformatter-braces.svg?style=flat)](https://travis-ci.org/pgilad/esformatter-braces)
 
-**esformatter-braces** will enforce braces around your statements where needed. Checkout [Jetbrain's Idea](http://www.jetbrains.com/idea/webhelp10.5/wrapping-and-braces.html)
-and specifically the **Force braces - always** section for more information on behavior.
-
-This complies with the **jshint** option - [curly](http://www.jshint.com/docs/options/#curly).
-
-Currently the following node types are handled:
- **If conditionals**, **While**, **Do While**, **For loops**
+**Esformatter-braces** is a plugin for [esformatter](https://github.com/millermedeiros/esformatter) meant for brace enforcement around statements. Recommended by Douglas Crockford in his [coding style guide](http://javascript.crockford.com/code.html).
 
 Turn this:
 ```js
@@ -26,6 +20,13 @@ if (theSkyIsBlue) {
     stareAtItForAWhile();
 }
 ```
+
+For more information see:
+- [Jetbrain's Idea](http://www.jetbrains.com/idea/webhelp10.5/wrapping-and-braces.html) and specifically the **Force brace always** section.
+- The [jshint](https://github.com/jshint/jshint/) option - [curly](http://www.jshint.com/docs/options/#curly)
+
+Currently the following node statements are handled:
+ **If conditionals**, **While**, **Do While**, **For loops**
 
 *For any formatting (such as braces placement, spacing and line wrapping) use esformatter or other plugins for that.*
 
