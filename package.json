@@ -40,6 +40,7 @@
     "mocha": "^1.20.1"
   },
   "dependencies": {
+    "esformatter": "^0.4.1",
     "rocambole-token": "^1.2.1"
   }
 }
