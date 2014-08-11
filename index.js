@@ -1,4 +1,3 @@
-//jshint node:true, eqnull:true
 'use strict';
 
 var tk = require('rocambole-token');
@@ -34,15 +33,17 @@ var checkConditionals = function (node) {
     }
 };
 
+var isLoopNode = function (node) {
+    return node.type === 'WhileStatement' ||
+        node.type === 'DoWhileStatement' ||
+        node.type === 'ForStatement';
+};
+
 exports.nodeBefore = function (node) {
     //handle conditionals
     if (node.type === 'IfStatement') {
         checkConditionals(node);
-    }
-    //handle loops
-    if (node.type === 'WhileStatement' || node.type === 'DoWhileStatement' || node.type === 'ForStatement') {
-        if (node.body.type === 'ExpressionStatement') {
-            wrapWithBraces(node, 'body');
-        }
+    } else if (isLoopNode(node) && node.body.type === 'ExpressionStatement') {
+        wrapWithBraces(node, 'body');
     }
 };

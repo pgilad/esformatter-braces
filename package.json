@@ -1,6 +1,6 @@
 {
   "name": "esformatter-braces",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "esformatter plugin: enforces braces around statements",
   "engines": {
     "node": ">=0.10.0"
@@ -36,11 +36,10 @@
   "homepage": "https://github.com/pgilad/esformatter-braces",
   "devDependencies": {
     "chai": "^1.9.1",
-    "esformatter": "^0.3.2",
+    "esformatter": "^0.4.1",
     "mocha": "^1.21.0"
   },
   "dependencies": {
-    "esformatter": "^0.4.1",
     "rocambole-token": "^1.2.1"
   }
 }
