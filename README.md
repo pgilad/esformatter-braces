@@ -23,12 +23,12 @@ if (theSkyIsBlue) {
 
 For more information see:
 - [Jetbrain's Idea](http://www.jetbrains.com/idea/webhelp10.5/wrapping-and-braces.html) and specifically the **Force brace always** section.
-- The [jshint](https://github.com/jshint/jshint/) option - [curly](http://www.jshint.com/docs/options/#curly)
+- The [jsHint](https://github.com/jshint/jshint/) option - [curly](http://www.jshint.com/docs/options/#curly)
 
 Currently the following node statements are handled:
  **If conditionals**, **While**, **Do While**, **For loops**
 
-*For any formatting (such as braces placement, spacing and line wrapping) use esformatter or other plugins for that.*
+*For any other formatting (such as braces placement, spacing and line wrapping) use esformatter or other plugins.*
 
 ## Goals
 
@@ -66,13 +66,15 @@ esformatter.register(require('esformatter-braces'));
 ```js
 var fs = require('fs');
 var esformatter = require('esformatter');
+//register plugin manually
+esformatter.register(require('esformatter-braces'));
 
 var str = fs.readFileSync('someKewlFile.js').toString();
 var output = esformatter.format(str);
 //-> output will now contain the formatted string
 ```
 
-For more options and usage please see [esformatter](https://github.com/millermedeiros/esformatter)
+See [esformatter](https://github.com/millermedeiros/esformatter) for more options and further usage.
 
 ## License
 
