@@ -50,7 +50,7 @@ Add to your esformatter config file:
 ```json
 {
   "plugins": [
-    "esformatter-quotes"
+    "esformatter-braces"
   ]
 }
 ```
@@ -58,7 +58,7 @@ Add to your esformatter config file:
 Or you can manually register your plugin:
 ```js
 // register plugin
-esformatter.register(require('esformatter-quotes'));
+esformatter.register(require('esformatter-braces'));
 ```
 
 ## Usage
