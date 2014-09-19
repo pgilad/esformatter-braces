@@ -57,12 +57,15 @@ describe('esformatter-braces', function () {
         });
     });
 
-    describe('all around testing', function () {
-        it('should prove the example in readme works', function () {
-            var input = readFile('fixtures', 'basic.js');
-            var actual = esformatter.format(input);
-            var expected = readFile('expected', 'basic.js');
-            expect(actual).to.be.eql(expected);
+    describe('should test various scenarios', function () {
+        var files = fs.readdirSync('./test/fixtures/');
+        files.forEach(function (file) {
+            it('should transform fixture ' + file + ' and be equal expected file', function () {
+                var input = readFile('fixtures', file);
+                var actual = esformatter.format(input);
+                var expected = readFile('expected', file);
+                expect(actual).to.eql(expected, 'file comparison failed: ' + file);
+            });
         });
     });
 });

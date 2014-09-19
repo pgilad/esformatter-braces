@@ -3,23 +3,28 @@
 var tk = require('rocambole-token');
 
 var wrapWithBraces = function (node, prop) {
-    var old = node[prop];
-    var block = {
+    var oldNode = node[prop];
+    var finalToken = oldNode.endToken;
+    //apply a custom fix if endtoken is empty
+    if (tk.isEmpty(oldNode.endToken)) {
+        finalToken = tk.findPrevNonEmpty(oldNode.endToken);
+    }
+    var newNode = {
         type: 'BlockStatement',
-        parent: old.parent,
-        root: old.root,
-        body: [old],
-        startToken: tk.before(old.startToken, {
+        parent: oldNode.parent,
+        root: oldNode.root,
+        body: [oldNode],
+        startToken: tk.before(oldNode.startToken, {
             type: 'Punctuator',
             value: '{'
         }),
-        endToken: tk.after(old.endToken, {
+        endToken: tk.after(finalToken, {
             type: 'Punctuator',
             value: '}'
         })
     };
-    old.parent = block;
-    node[prop] = block;
+    oldNode.parent = newNode;
+    node[prop] = newNode;
 };
 
 var checkConditionals = function (node) {
