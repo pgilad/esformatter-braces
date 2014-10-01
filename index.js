@@ -41,7 +41,8 @@ var checkConditionals = function (node) {
 var isLoopNode = function (node) {
     return node.type === 'WhileStatement' ||
         node.type === 'DoWhileStatement' ||
-        node.type === 'ForStatement';
+        node.type === 'ForStatement' ||
+        node.type === 'ForInStatement';
 };
 
 exports.nodeBefore = function (node) {
