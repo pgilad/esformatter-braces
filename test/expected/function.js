@@ -3,5 +3,13 @@ function foo(bar) {
     alert()
   }
 
+  if (bar) {
+    var ref = bar;
+  }
+
+  if (ref) {
+    return;
+  }
+
   return;
 }

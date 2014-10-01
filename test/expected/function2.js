@@ -3,5 +3,9 @@ function foo(bar) {
     alert();
   }
 
+  do {
+    return;
+  } while (a);
+
   return;
 }
