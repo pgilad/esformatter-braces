@@ -29,11 +29,11 @@ var wrapWithBraces = function (node, prop) {
 
 var checkConditionals = function (node) {
     //replace regular conditionals
-    if (node.consequent.type === 'ExpressionStatement') {
+    if (node.consequent.type !== 'BlockStatement') {
         wrapWithBraces(node, 'consequent');
     }
     //replace else alternate conditional
-    if (node.alternate && node.alternate.type === 'ExpressionStatement') {
+    if (node.alternate && node.alternate.type !== 'BlockStatement') {
         wrapWithBraces(node, 'alternate');
     }
 };
@@ -48,7 +48,7 @@ exports.nodeBefore = function (node) {
     //handle conditionals
     if (node.type === 'IfStatement') {
         checkConditionals(node);
-    } else if (isLoopNode(node) && node.body.type === 'ExpressionStatement') {
+    } else if (isLoopNode(node) && node.body.type !== 'BlockStatement') {
         wrapWithBraces(node, 'body');
     } else if (node.type === 'ForInStatement' && node.body.type !== 'BlockStatement') {
         wrapWithBraces(node, 'body');
