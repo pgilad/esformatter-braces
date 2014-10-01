@@ -50,5 +50,7 @@ exports.nodeBefore = function (node) {
         checkConditionals(node);
     } else if (isLoopNode(node) && node.body.type === 'ExpressionStatement') {
         wrapWithBraces(node, 'body');
+    } else if (node.type === 'ForInStatement' && node.body.type !== 'BlockStatement') {
+        wrapWithBraces(node, 'body');
     }
 };
