@@ -29,7 +29,7 @@ var wrapWithBraces = function (node, prop) {
 
 var checkConditionals = function (node) {
     //replace regular conditionals
-    if (node.consequent.type !== 'Blockstatement') {
+    if (node.consequent.type !== 'BlockStatement') {
         wrapWithBraces(node, 'consequent');
     }
     //replace else alternate conditional
