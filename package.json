@@ -35,9 +35,9 @@
   "bugs": "https://github.com/pgilad/esformatter-braces/issues",
   "homepage": "https://github.com/pgilad/esformatter-braces",
   "devDependencies": {
-    "chai": "^1.9.1",
+    "chai": "*",
     "esformatter": "^0.4.2",
-    "mocha": "^1.21.0"
+    "mocha": "*"
   },
   "dependencies": {
     "rocambole-token": "^1.2.1"
