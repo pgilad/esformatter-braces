@@ -1,6 +1,6 @@
 {
   "name": "esformatter-braces",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "esformatter plugin: enforces braces around statements",
   "repository": "pgilad/esformatter-braces",
   "license": "MIT",
