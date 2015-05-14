@@ -30,6 +30,7 @@
     "codestyle"
   ],
   "dependencies": {
+    "esformatter": "^0.7.0",
     "rocambole-token": "^1.2.1"
   },
   "devDependencies": {
