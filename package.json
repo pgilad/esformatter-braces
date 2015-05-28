@@ -22,6 +22,7 @@
   },
   "keywords": [
     "esformatter",
+    "esformatter-plugin",
     "string",
     "braces",
     "AST",
